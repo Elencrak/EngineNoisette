@@ -2,10 +2,20 @@
 //
 
 #include "stdafx.h"
+#include <iostream>
 
 
 int main()
 {
-    return 0;
+	char lettre;
+	while (true)
+	{
+		std::cin >> lettre;
+		if (lettre != 'q')
+			std::cout << "Vous avez tapez " << lettre << std::endl;
+		else
+			return 0;
+
+	}
 }
 
