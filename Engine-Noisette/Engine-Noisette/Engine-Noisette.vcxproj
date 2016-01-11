@@ -151,15 +151,14 @@
     <ClInclude Include="Adventure.h" />
     <ClInclude Include="Arena.h" />
     <ClInclude Include="Attack.h" />
-    <ClInclude Include="BackKick.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="Combo.h" />
     <ClInclude Include="Crouch.h" />
-    <ClInclude Include="CrouchKick.h" />
     <ClInclude Include="Fight.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameMode.h" />
     <ClInclude Include="FightState.h" />
+    <ClInclude Include="EnumAction.h" />
     <ClInclude Include="StateEnum.h" />
     <ClInclude Include="InAir.h" />
     <ClInclude Include="InputHandle.h" />
@@ -167,8 +166,6 @@
     <ClInclude Include="Kick.h" />
     <ClInclude Include="MoveBackward.h" />
     <ClInclude Include="MoveForward.h" />
-    <ClInclude Include="MoveLeft.h" />
-    <ClInclude Include="MoveRight.h" />
     <ClInclude Include="Normal.h" />
     <ClInclude Include="Protect.h" />
     <ClInclude Include="Punch.h" />
@@ -187,11 +184,9 @@
     <ClCompile Include="Adventure.cpp" />
     <ClCompile Include="Arena.cpp" />
     <ClCompile Include="Attack.cpp" />
-    <ClCompile Include="BackKick.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Combo.cpp" />
     <ClCompile Include="Crouch.cpp" />
-    <ClCompile Include="CrouchKick.cpp" />
     <ClCompile Include="Engine-Noisette.cpp" />
     <ClCompile Include="Fight.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -202,8 +197,6 @@
     <ClCompile Include="Kick.cpp" />
     <ClCompile Include="MoveBackward.cpp" />
     <ClCompile Include="MoveForward.cpp" />
-    <ClCompile Include="MoveLeft.cpp" />
-    <ClCompile Include="MoveRight.cpp" />
     <ClCompile Include="Normal.cpp" />
     <ClCompile Include="Protect.cpp" />
     <ClCompile Include="Punch.cpp" />

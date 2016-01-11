@@ -13,4 +13,5 @@ Kick::~Kick()
 
 void Kick::Execute()
 {
+	std::cout << "Exec Kick" << std::endl;
 }

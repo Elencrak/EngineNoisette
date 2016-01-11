@@ -46,7 +46,7 @@ Fight* QuickMatch::CreateFight()
 	std::vector<Character*> players;
 	
 	players.push_back(new Character("Michel", 1, 100));
-	players.push_back(new Character("Roger", 2, 150));
+	players.push_back(new Character("Roger", 1, 150));
 
 	m_Duration = -1;
 	m_VictoryCondition = VictoryCondition::NoHealth;

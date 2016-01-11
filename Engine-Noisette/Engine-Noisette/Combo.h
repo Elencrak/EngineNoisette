@@ -11,9 +11,9 @@ public:
 	~Combo();
 
 	//Method
-	virtual void Execute() = 0;
-	virtual void Add() = 0;
-	virtual void Remove()= 0;
+	void Execute();
+	void Add(Action* p_action);
+	void Remove(Action* p_action);
 	
 };
 

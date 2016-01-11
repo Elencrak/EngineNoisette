@@ -13,4 +13,5 @@ Crouch::~Crouch()
 
 void Crouch::Execute()
 {
+	std::cout << "Exec Crouch" << std::endl;
 }

@@ -13,4 +13,5 @@ MoveForward::~MoveForward()
 
 void MoveForward::Execute()
 {
+	std::cout << "Exec MoveForWard" << std::endl;
 }

@@ -55,11 +55,11 @@ int main()
 	{
 
 		NoisetteFighterFight->Update();
-		std::cin >> lettre;
+		/*std::cin >> lettre;
 		if (lettre != 'q')
 			std::cout << "Vous avez tapez " << lettre << std::endl;
 		else
-			return 0;
+			return 0;*/
 	}
 }
 

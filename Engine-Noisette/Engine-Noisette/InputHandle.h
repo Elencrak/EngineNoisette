@@ -1,24 +1,21 @@
 #pragma once
 #include <iostream>
 #include <list>
-#include <string>
+#include <map>
 #include "Action.h"
+#include "EnumAction.h"
+
 class InputHandle
 {
 private:
-	std::string m_up;
-	std::string m_down;
-	std::string m_right;
-	std::string m_action1;
-	std::string m_action2;
-	std::string m_action3;
+	std::map<EnumAction,Action*> m_Actions;
 
-	std::list<Action*> m_Actions;
 public:
-	InputHandle();
+	//InputHandle();
+	InputHandle(int p_PlayerId);
 	~InputHandle();
 
-	void HandleInput();
+	Action* HandleInput(EnumAction p_EnumAction);
 	void ExcuteCombo();
 };
 

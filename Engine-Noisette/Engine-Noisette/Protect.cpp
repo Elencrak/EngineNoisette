@@ -13,4 +13,5 @@ Protect::~Protect()
 
 void Protect::Execute()
 {
+	std::cout << "Exec Protect" << std::endl;
 }

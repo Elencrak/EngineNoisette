@@ -13,4 +13,5 @@ Jump::~Jump()
 
 void Jump::Execute()
 {
+	std::cout << "Exec Jump" << std::endl;
 }
