@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "Fight.h"
 
 
@@ -6,11 +7,11 @@ void Fight::Update()
 {
 }
 
-void Fight::AddObserver(AbstractObserver o)
+void Fight::AddObserver(AbstractObserver* o)
 {
 }
 
-void Fight::RemoveObserver(AbstractObserver o)
+void Fight::RemoveObserver(AbstractObserver* o)
 {
 }
 

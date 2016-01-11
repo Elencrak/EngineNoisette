@@ -7,7 +7,7 @@ public:
 	Game();
 	~Game();
 
-	int GameVersion;
-	std::string GameName;
+	int m_GameVersion;
+	std::string m_GameName;
 };
 

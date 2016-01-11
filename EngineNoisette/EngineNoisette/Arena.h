@@ -8,6 +8,6 @@ public:
 	Arena();
 	~Arena();
 
-	std::string Name;
+	std::string m_Name;
 };
 
