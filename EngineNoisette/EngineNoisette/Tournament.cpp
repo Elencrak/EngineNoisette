@@ -3,6 +3,19 @@
 
 
 
+void Tournament::Notify(AbstractObservable * p_Observable)
+{
+}
+
+Fight* Tournament::CreateFight()
+{
+}
+
+GameMode * Tournament::GetInstance()
+{
+	return nullptr;
+}
+
 Tournament::Tournament()
 {
 }

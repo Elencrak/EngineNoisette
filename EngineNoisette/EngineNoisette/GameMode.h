@@ -1,13 +1,14 @@
 #pragma once
 #include "VictoryCondition.h"
 #include "AbstractObservable.h"
+#include "Fight.h"
 //#include "Character.h"
 class GameMode : public AbstractObserver
 {
 
 public:
 	virtual void Notify(AbstractObservable* p_Observable) = 0;
-	virtual void CreateFight() = 0;
+	virtual Fight* CreateFight() = 0;
 	virtual GameMode* GetInstance() = 0;
 	GameMode();
 	~GameMode();

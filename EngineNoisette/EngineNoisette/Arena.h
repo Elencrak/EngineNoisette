@@ -5,6 +5,7 @@ class Arena
 public:
 	void Update();
 	void Draw();
+	Arena(std::string p_Name);
 	Arena();
 	~Arena();
 
