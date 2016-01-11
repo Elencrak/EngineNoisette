@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Character.h"
+#include "State.h"
 
 
 Character::Character()

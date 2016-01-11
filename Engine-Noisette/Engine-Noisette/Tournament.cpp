@@ -9,6 +9,7 @@ void Tournament::Notify(AbstractObservable * p_Observable)
 
 Fight* Tournament::CreateFight()
 {
+	return nullptr;
 }
 
 GameMode * Tournament::GetInstance()

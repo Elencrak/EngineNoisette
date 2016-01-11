@@ -11,6 +11,6 @@ State::~State()
 {
 }
 
-void State::TakeDamage(Character p_Character)
+void State::TakeDamage(Character* p_Character)
 {
 }

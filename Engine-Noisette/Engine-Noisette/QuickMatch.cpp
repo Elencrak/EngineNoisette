@@ -9,12 +9,12 @@ void QuickMatch::Notify(AbstractObservable * p_Observable)
 
 Fight* QuickMatch::CreateFight()
 {
-
+	return nullptr;
 }
 
 GameMode* QuickMatch::GetInstance()
 {
-	return m_Singleton;
+	return nullptr;
 }
 
 QuickMatch::QuickMatch()

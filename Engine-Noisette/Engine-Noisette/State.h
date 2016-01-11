@@ -15,6 +15,6 @@ public:
 
 	//Method
 	virtual void Update() = 0;
-	virtual void TakeDamage(Character  p_Character);
+	virtual void TakeDamage(Character*  p_Character);
 };
 

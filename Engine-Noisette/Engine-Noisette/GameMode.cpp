@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "GameMode.h"
+#include "Fight.h"
 
 
 

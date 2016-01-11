@@ -17,6 +17,6 @@ void InAir::Update()
 }
 
 // Dégat /2
-void InAir::TakeDamage(Character p_Character)
+void InAir::TakeDamage(Character* p_Character)
 {
 }

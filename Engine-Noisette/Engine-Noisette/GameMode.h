@@ -1,8 +1,8 @@
 #pragma once
 #include "VictoryCondition.h"
 #include "AbstractObservable.h"
-#include "Fight.h"
 //#include "Character.h"
+class Fight;
 class GameMode : public AbstractObserver
 {
 

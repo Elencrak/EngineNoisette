@@ -17,6 +17,6 @@ void Stun::Update()
 }
 
 // Dégat x2
-void Stun::TakeDamage(Character p_Character)
+void Stun::TakeDamage(Character* p_Character)
 {
 }
