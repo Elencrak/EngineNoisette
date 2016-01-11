@@ -3,6 +3,19 @@
 
 
 
+void Adventure::Notify(AbstractObservable * p_Observable)
+{
+}
+
+Fight* Adventure::CreateFight()
+{
+}
+
+GameMode * Adventure::GetInstance()
+{
+	return nullptr;
+}
+
 Adventure::Adventure()
 {
 }

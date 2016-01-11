@@ -12,7 +12,7 @@ public:
 	void AddObserver(AbstractObserver* p_Observer);
 	void RemoveObserver(AbstractObserver* p_Observer);
 	void NotifyObserver();
-	Fight();
+	//Fight(Arena* p_Arene,GameMode* p_GameMode, std::vector<Character*> m_Characters);
 	~Fight();
 	Arena* m_Arena;
 	GameMode* m_GameMode;
