@@ -1,7 +1,7 @@
 #pragma once
 #include "VictoryCondition.h"
 #include "AbstractObservable.h"
-//#include "Character.h"
+#include "Character.h"
 class Fight;
 class GameMode : public AbstractObserver
 {
@@ -9,7 +9,6 @@ class GameMode : public AbstractObserver
 public:
 	virtual void Notify(AbstractObservable* p_Observable) = 0;
 	virtual Fight* CreateFight() = 0;
-	virtual GameMode* GetInstance() = 0;
 	GameMode();
 	~GameMode();
 
@@ -20,8 +19,8 @@ public:
 private:
 	VictoryCondition m_VictoryCondition;
 	float m_Duration;
-	GameMode* m_Singleton;
-	//Character* m_winner;
+	Character* m_winner;
+	Fight* currentFight;
 };
 
 

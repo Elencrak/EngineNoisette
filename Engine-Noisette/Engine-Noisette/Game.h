@@ -4,6 +4,7 @@ class Game
 {
 public:
 	void Update();
+	Game(std::string p_Name);
 	Game();
 	~Game();
 

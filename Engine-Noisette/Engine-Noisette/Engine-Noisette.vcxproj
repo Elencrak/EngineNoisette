@@ -159,6 +159,8 @@
     <ClInclude Include="Fight.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameMode.h" />
+    <ClInclude Include="FightState.h" />
+    <ClInclude Include="StateEnum.h" />
     <ClInclude Include="InAir.h" />
     <ClInclude Include="InputHandle.h" />
     <ClInclude Include="Jump.h" />
@@ -170,6 +172,7 @@
     <ClInclude Include="Normal.h" />
     <ClInclude Include="Protect.h" />
     <ClInclude Include="Punch.h" />
+    <ClInclude Include="QuickMatch.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Stun.h" />

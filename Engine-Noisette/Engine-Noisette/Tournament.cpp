@@ -2,7 +2,7 @@
 #include "Tournament.h"
 
 
-
+Tournament* Tournament::m_Singleton = nullptr;
 void Tournament::Notify(AbstractObservable * p_Observable)
 {
 }
@@ -12,7 +12,7 @@ Fight* Tournament::CreateFight()
 	return nullptr;
 }
 
-GameMode * Tournament::GetInstance()
+Tournament* Tournament::GetInstance()
 {
 	return nullptr;
 }

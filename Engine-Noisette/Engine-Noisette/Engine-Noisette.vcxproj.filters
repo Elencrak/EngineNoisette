@@ -129,6 +129,15 @@
     <ClInclude Include="VictoryCondition.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="QuickMatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StateEnum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FightState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

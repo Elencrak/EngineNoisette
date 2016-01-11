@@ -11,6 +11,6 @@ public:
 
 	// Method
 	void Update() override;
-	void TakeDamage(Character*  p_Character) override;
+	void TakeDamage(Character*  p_Character, float damage) override;
 };
 

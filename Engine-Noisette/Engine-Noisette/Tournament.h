@@ -5,13 +5,13 @@ class Tournament : public GameMode
 public:
 	void Notify(AbstractObservable* p_Observable);
 	Fight* CreateFight();
-	static GameMode* GetInstance();
+	static Tournament* GetInstance();
 	Tournament();
 	~Tournament();
 private:
 	VictoryCondition m_VictoryCondition;
 	float m_Duration;
-	GameMode* m_Singleton;
-	//Character* m_winner;
+	static Tournament* m_Singleton;
+	Character* m_winner;
 };
 

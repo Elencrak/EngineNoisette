@@ -7,19 +7,21 @@
 #include <vector>
 class Fight : public AbstractObservable
 {
+private:
+	std::vector<AbstractObserver*> m_Observers;	
+
+	Arena* m_Arena;
+	GameMode* m_GameMode;
+	std::vector<Character*> m_Characters;
+
 public:
+	Fight(Arena* p_Arene, GameMode* p_GameMode, std::vector<Character*> m_Characters);
+	~Fight();
+
 	void Update();
 	void AddObserver(AbstractObserver* p_Observer);
 	void RemoveObserver(AbstractObserver* p_Observer);
 	void NotifyObserver();
-	//Fight(Arena* p_Arene,GameMode* p_GameMode, std::vector<Character*> m_Characters);
-	~Fight();
-	Arena* m_Arena;
-	GameMode* m_GameMode;
-	//std::vector<Character*> m_Characters;
-
-private:
-	std::vector<AbstractObserver*> m_Observers;
 
 };
 

@@ -15,8 +15,9 @@ InAir::~InAir()
 void InAir::Update()
 {
 }
-
-// Dégat /2
-void InAir::TakeDamage(Character* p_Character)
+//Degat /2
+void InAir::TakeDamage(Character * p_Character, float damage)
 {
+	p_Character->applyDamage(damage / 2);
 }
+
