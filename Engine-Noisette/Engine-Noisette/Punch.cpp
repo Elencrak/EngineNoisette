@@ -14,5 +14,6 @@ Punch::~Punch()
 
 void Punch::Execute()
 {
+	std::cout << "Exec Punch" << std::endl;
 }
 

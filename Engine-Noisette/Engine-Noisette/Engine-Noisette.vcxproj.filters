@@ -78,9 +78,6 @@
     <ClInclude Include="MoveForward.h">
       <Filter>Header Files\Action</Filter>
     </ClInclude>
-    <ClInclude Include="Protect.h">
-      <Filter>Header Files\Action</Filter>
-    </ClInclude>
     <ClInclude Include="Punch.h">
       <Filter>Header Files\Action</Filter>
     </ClInclude>
@@ -171,9 +168,6 @@
       <Filter>Source Files\Action</Filter>
     </ClCompile>
     <ClCompile Include="Crouch.cpp">
-      <Filter>Source Files\Action</Filter>
-    </ClCompile>
-    <ClCompile Include="Protect.cpp">
       <Filter>Source Files\Action</Filter>
     </ClCompile>
     <ClCompile Include="Punch.cpp">

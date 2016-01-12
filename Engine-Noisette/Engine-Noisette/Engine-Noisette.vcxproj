@@ -167,7 +167,6 @@
     <ClInclude Include="MoveBackward.h" />
     <ClInclude Include="MoveForward.h" />
     <ClInclude Include="Normal.h" />
-    <ClInclude Include="Protect.h" />
     <ClInclude Include="Punch.h" />
     <ClInclude Include="QuickMatch.h" />
     <ClInclude Include="State.h" />
@@ -198,7 +197,6 @@
     <ClCompile Include="MoveBackward.cpp" />
     <ClCompile Include="MoveForward.cpp" />
     <ClCompile Include="Normal.cpp" />
-    <ClCompile Include="Protect.cpp" />
     <ClCompile Include="Punch.cpp" />
     <ClCompile Include="QuickMatch.cpp" />
     <ClCompile Include="State.cpp" />
