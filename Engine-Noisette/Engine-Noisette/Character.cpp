@@ -58,7 +58,7 @@ Character::~Character()
 
 }
 
-void Character::TakeDamage(float p_Damage)
+void Character::TakeDamage(int p_Damage)
 {
 	m_CurrentState->TakeDamage(this, p_Damage);
 }

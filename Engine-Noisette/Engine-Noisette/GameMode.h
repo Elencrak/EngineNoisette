@@ -2,6 +2,7 @@
 #include "VictoryCondition.h"
 #include "AbstractObservable.h"
 #include "Character.h"
+
 class Fight;
 class GameMode : public AbstractObserver
 {

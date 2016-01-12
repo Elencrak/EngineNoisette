@@ -13,6 +13,5 @@ private:
 	VictoryCondition m_VictoryCondition;
 	float m_Duration;
 	static QuickMatch* m_Singleton;
-	Character* m_winner;
 };
 

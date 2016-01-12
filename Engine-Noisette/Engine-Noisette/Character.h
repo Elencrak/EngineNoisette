@@ -12,7 +12,7 @@ class Character
 private:
 	int m_PlayerId;
 	int m_MaxLife;
-	float m_currentLife;
+	int m_currentLife;
 	std::string m_CharacterName;
 
 	State* m_CurrentState;
@@ -29,7 +29,7 @@ public:
 	~Character();
 	
 	//Method
-	void TakeDamage(float p_Damage);
+	void TakeDamage(int p_Damage);
 	void ExecuteAction();
 	void SetState(StateEnum p_State);
 	void applyDamage(float p_amount);
