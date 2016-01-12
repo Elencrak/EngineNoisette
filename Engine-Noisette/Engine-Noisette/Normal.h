@@ -4,7 +4,7 @@ class Normal : public State
 {
 public:
 	//Constructor
-	Normal();
+	Normal(Character* p_Character);
 	~Normal();
 
 	//Method

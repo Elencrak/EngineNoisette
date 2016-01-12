@@ -6,7 +6,7 @@ class InAir : public State
 public:
 
 	// Constructor
-	InAir();
+	InAir(Character* p_Character);
 	~InAir();
 
 	// Method

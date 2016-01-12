@@ -9,8 +9,7 @@
 #include "Adventure.h"
 #include "Fight.h"
 #include <iostream>
-
-
+#include <Windows.h>
 int main()
 {
 	Game* NoisetteFighter = new Game("Noisette Fighter");
@@ -18,21 +17,22 @@ int main()
 	std::cout << "Bienvenus sur  "<< NoisetteFighter->m_GameName << std::endl;
 	std::cout << "Selection des mode " << std::endl;
 	GameMode* NoisetteFighterMode = nullptr;
-	char lettre;
-	do{
+	std::string lettre = "0";
+	
+	while (lettre != "1"){
 		std::cout << "**********************************************" << std::endl
 			<< "Les modes selectionnables sont :  " << std::endl
 			<< "Quick match tappez 1 pour le selectionner " << std::endl
 			<< "Aventure match tappez 2 pour le selectionner " << std::endl
 			<< "Tournoi match tappez 3 pour le selectionner " << std::endl
 			<< "********************************************" << std::endl;
-		std::cin >> lettre;
-		switch (lettre)
+
+		getline(std::cin, lettre);
+		switch (lettre[0])
 		{
 		case '1':
 			NoisetteFighterMode = QuickMatch::GetInstance();
 			std::cout << std::endl << "Vous avez selectionner le mode quick match" << std::endl;
-
 			break;
 		case '2':
 			std::cout << std::endl << "Ce mode est en cours de developpement" << std::endl;
@@ -44,22 +44,23 @@ int main()
 			std::cout << std::endl << "Vous n'avez pas selectionner un mode existant" << std::endl;
 			break;
 		}
-	}while (lettre != '1');
-	
+	}
+	system("cls");
+	std::cout << std::endl << "***********************" << std::endl;
+	std::cout << "*   Debut du combat   *" << std::endl;
+	std::cout << "***********************" << std::endl;
+	std::cout << std::endl;
+
 	if (NoisetteFighterMode == nullptr) 
 		return -1;
 	
 	Fight* NoisetteFighterFight = NoisetteFighterMode->CreateFight();
 
-	while (true)
+	while (NoisetteFighterFight->m_fightState == FightState::Nothing)
 	{
-
 		NoisetteFighterFight->Update();
-		/*std::cin >> lettre;
-		if (lettre != 'q')
-			std::cout << "Vous avez tapez " << lettre << std::endl;
-		else
-			return 0;*/
 	}
+
+	system("pause");
 }
 

@@ -3,7 +3,7 @@
 #include <list>
 class Combo : public Action
 {
-protected:
+private:
 	std::list<Action*> m_comboAction;
 public:
 	// Constructor
@@ -14,6 +14,9 @@ public:
 	void Execute();
 	void Add(Action* p_action);
 	void Remove(Action* p_action);
+	void Clear();
+	int GetLength();
+	int GetDamage();
 	
 };
 

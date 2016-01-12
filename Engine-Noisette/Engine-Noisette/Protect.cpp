@@ -4,6 +4,7 @@
 
 Protect::Protect()
 {
+	m_Damage = 0;
 }
 
 
@@ -13,5 +14,4 @@ Protect::~Protect()
 
 void Protect::Execute()
 {
-	std::cout << "Exec Protect" << std::endl;
 }

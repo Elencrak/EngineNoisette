@@ -6,11 +6,11 @@ class State
 {
 protected:
 	std::string m_StateName;
-
+	Character* m_linkCharacter;
 public:
 
 	// Constructor
-	State();
+	State(Character* p_Character);
 	~State();
 
 	//Method

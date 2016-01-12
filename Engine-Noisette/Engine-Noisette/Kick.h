@@ -3,6 +3,7 @@
 class Kick : public Action
 {
 public:
+
 	Kick();
 	~Kick();
 

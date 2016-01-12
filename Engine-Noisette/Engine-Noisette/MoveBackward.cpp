@@ -4,6 +4,7 @@
 
 MoveBackward::MoveBackward()
 {
+	m_Damage = 0;
 }
 
 

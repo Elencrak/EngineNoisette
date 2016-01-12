@@ -6,7 +6,7 @@ class Attack : public State
 public:
 
 	//Contructor
-	Attack();
+	Attack(Character* p_Character);
 	~Attack();
 
 	// Method

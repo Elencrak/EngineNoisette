@@ -4,6 +4,7 @@
 
 Kick::Kick()
 {
+	m_Damage = 10;
 }
 
 
@@ -13,5 +14,6 @@ Kick::~Kick()
 
 void Kick::Execute()
 {
-	std::cout << "Exec Kick" << std::endl;
 }
+
+

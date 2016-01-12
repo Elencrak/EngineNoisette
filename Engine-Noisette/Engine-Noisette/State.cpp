@@ -1,8 +1,9 @@
 #include "stdafx.h"
 #include "State.h"
+#include <stdlib.h> 
 
 
-State::State()
+State::State(Character* p_Character): m_linkCharacter(p_Character)
 {
 }
 
@@ -16,7 +17,16 @@ std::string State::getStateName()
 	return m_StateName;
 }
 
-void State::TakeDamage(Character* p_Character, float damage)
+void State::TakeDamage(Character* p_SelfCharacter, float damage)
 {
-	p_Character->applyDamage(damage);
+	p_SelfCharacter->applyDamage(damage);
+	if (damage > 0)
+	{
+		std::cout << " je prend des degats de " << p_SelfCharacter->GetCharacterTarget()->GetName() << std::endl;
+		int rand = std::rand() % 100;
+		if (rand > 75)
+			p_SelfCharacter->SetState(StateEnum::Stun);
+	
+
+	}
 }

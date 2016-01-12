@@ -5,8 +5,10 @@ class Stun : public State
 {
 public:
 
+	int nbStunRound;
+
 	// Constructor
-	Stun();
+	Stun(Character* p_Character);
 	~Stun();
 
 	//Method

@@ -7,15 +7,22 @@ void Fight::Update()
 	m_Arena->Update();
 	for (std::vector<Character*>::iterator it = m_Characters.begin(); it != m_Characters.end(); ++it)
 	{
-		Character* tmp = *it;
-		tmp->Update();
-		if (tmp->currentLife == 0) {
-			if (tmp->GetPlayerID() == 1) {
-				this->m_fightState = FightState::P1Win;
-			} else if (tmp->GetPlayerID() == 1) {
-				this->m_fightState = FightState::P2Win;
+		if (m_fightState == FightState::Nothing) {
+			Character* tmp = *it;
+			tmp->Update();
+
+			for (std::vector<Character*>::iterator it2 = m_Characters.begin(); it2 != m_Characters.end(); ++it2) {
+				Character* lifeTest = *it2;
+				if (lifeTest->GetCurrentLife() == 0) {
+					if (lifeTest->GetPlayerID() == 1) {
+						this->m_fightState = FightState::P1Win;
+					}
+					else if (lifeTest->GetPlayerID() == 2) {
+						this->m_fightState = FightState::P2Win;
+					}
+					this->NotifyObserver();
+				}
 			}
-			this->NotifyObserver();
 		}
 	}
 	// Check si un player à plus de vie ou que le temps est finis

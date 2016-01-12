@@ -4,6 +4,7 @@
 
 MoveForward::MoveForward()
 {
+	m_Damage = 0;
 }
 
 

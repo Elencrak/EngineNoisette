@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+
 class Action
 {
 protected:
@@ -13,5 +14,8 @@ public:
 
 	//Method
 	virtual void Execute() = 0;
+
+	// Getter
+	int GetDamage();
 };
 

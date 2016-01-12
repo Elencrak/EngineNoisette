@@ -36,3 +36,24 @@ void Combo::Remove(Action* p_action)
 	}
 	
 }
+
+void Combo::Clear()
+{
+	m_comboAction.clear();
+}
+
+int Combo::GetLength()
+{
+	return m_comboAction.size();
+}
+
+int Combo::GetDamage()
+{
+	int Damage = 0;
+	std::list<Action*>::iterator it;
+	for (it = m_comboAction.begin(); it != m_comboAction.end(); ++it) {
+		Action* tmp = *it;
+		Damage += tmp->GetDamage();
+	}
+	return Damage;
+}

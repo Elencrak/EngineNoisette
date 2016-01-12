@@ -10,10 +10,11 @@
 
 InputHandle::InputHandle(int p_PlayerId)
 {
+	
 	m_Actions = std::map<EnumAction, Action*>();
 
-	m_Actions.insert(std::pair<EnumAction, Action*>(EnumAction::Up, new Crouch()));
-	m_Actions.insert(std::pair<EnumAction, Action*>(EnumAction::Down, new Jump()));
+	m_Actions.insert(std::pair<EnumAction, Action*>(EnumAction::Up, new Jump()));
+	m_Actions.insert(std::pair<EnumAction, Action*>(EnumAction::Down, new Crouch()));
 	m_Actions.insert(std::pair<EnumAction, Action*>(EnumAction::Right, new MoveForward()));
 	m_Actions.insert(std::pair<EnumAction, Action*>(EnumAction::Left, new MoveBackward()));
 	m_Actions.insert(std::pair<EnumAction, Action*>(EnumAction::Action1, new Kick()));
