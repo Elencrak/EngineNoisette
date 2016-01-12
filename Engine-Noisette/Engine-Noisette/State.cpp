@@ -22,7 +22,6 @@ void State::TakeDamage(Character* p_SelfCharacter, float damage)
 	p_SelfCharacter->applyDamage(damage);
 	if (damage > 0)
 	{
-		std::cout << " je prend des degats de " << p_SelfCharacter->GetCharacterTarget()->GetName() << std::endl;
 		int rand = std::rand() % 100;
 		if (rand > 75)
 			p_SelfCharacter->SetState(StateEnum::Stun);
