@@ -75,9 +75,9 @@ void Character::SetState(StateEnum p_State)
 		m_CurrentState = it->second;
 }
 
-void Character::applyDamage(float p_amount)
+void Character::applyDamage(int p_amount)
 {
-	m_currentLife = fmax(m_currentLife - p_amount, 0);
+	m_currentLife = (int)fmax(m_currentLife - p_amount, 0);
 }
 
 Character * Character::GetCharacterTarget()
@@ -112,7 +112,6 @@ void Character::Update()
 		m_CurrentState->Update();
 			return;
 	}
-
 
 	// J'ai essayé de le faire en propre et dynamique, mais comme la map se trie
 	// par ordre alphabetique des char passé, ça met toutes les input dans le désordre

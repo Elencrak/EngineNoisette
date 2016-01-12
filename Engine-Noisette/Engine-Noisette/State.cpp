@@ -17,7 +17,7 @@ std::string State::getStateName()
 	return m_StateName;
 }
 
-void State::TakeDamage(Character* p_SelfCharacter, float damage)
+void State::TakeDamage(Character* p_SelfCharacter, int damage)
 {
 	p_SelfCharacter->applyDamage(damage);
 	if (damage > 0)

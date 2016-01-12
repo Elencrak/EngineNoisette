@@ -32,7 +32,7 @@ void Stun::Update()
 }
 
 // Dégat x2
-void Stun::TakeDamage(Character* p_Character, float damage)
+void Stun::TakeDamage(Character* p_Character, int damage)
 {
 	m_linkCharacter->applyDamage(damage*2);
 }

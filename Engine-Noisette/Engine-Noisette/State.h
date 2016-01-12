@@ -7,6 +7,7 @@ class State
 protected:
 	std::string m_StateName;
 	Character* m_linkCharacter;
+
 public:
 
 	// Constructor
@@ -16,6 +17,6 @@ public:
 	//Method
 	std::string getStateName();
 	virtual void Update() = 0;
-	virtual void TakeDamage(Character*  p_Character, float damage);
+	virtual void TakeDamage(Character*  p_Character, int damage);
 };
 

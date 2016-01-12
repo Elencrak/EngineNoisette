@@ -4,7 +4,6 @@
 class Stun : public State
 {
 public:
-
 	int nbStunRound;
 
 	// Constructor
@@ -13,6 +12,6 @@ public:
 
 	//Method
 	void Update() override;
-	void TakeDamage(Character*  p_Character, float damage) override;
+	void TakeDamage(Character*  p_Character, int damage) override;
 };
 

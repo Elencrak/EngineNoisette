@@ -32,7 +32,7 @@ public:
 	void TakeDamage(int p_Damage);
 	void ExecuteAction();
 	void SetState(StateEnum p_State);
-	void applyDamage(float p_amount);
+	void applyDamage(int p_amount);
 
 	//Getter
 	int GetPlayerID();

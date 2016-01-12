@@ -18,7 +18,7 @@ void InAir::Update()
 
 }
 //Degat /2
-void InAir::TakeDamage(Character * p_Character, float damage)
+void InAir::TakeDamage(Character * p_Character, int damage)
 {
 	m_linkCharacter->applyDamage(damage / 2);
 }
