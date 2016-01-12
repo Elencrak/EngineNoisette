@@ -5,7 +5,6 @@
 #include "Kick.h"
 #include "MoveBackward.h"
 #include "MoveForward.h"
-#include "Protect.h"
 #include "Punch.h"
 
 InputHandle::InputHandle(int p_PlayerId)
@@ -19,7 +18,6 @@ InputHandle::InputHandle(int p_PlayerId)
 	m_Actions.insert(std::pair<EnumAction, Action*>(EnumAction::Left, new MoveBackward()));
 	m_Actions.insert(std::pair<EnumAction, Action*>(EnumAction::Action1, new Kick()));
 	m_Actions.insert(std::pair<EnumAction, Action*>(EnumAction::Action2, new Punch()));
-	m_Actions.insert(std::pair<EnumAction, Action*>(EnumAction::Action3, new Protect()));
 }
 
 

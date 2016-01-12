@@ -7,6 +7,5 @@ enum class EnumAction {
 	Left,
 	Action1,
 	Action2,
-	Action3,
 	Length
 };

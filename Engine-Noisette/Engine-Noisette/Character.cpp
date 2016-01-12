@@ -31,7 +31,6 @@ Character::Character(std::string p_CharacterName, int p_PlayerId, int p_MaxLife)
 		m_CorrespondanceMap.insert(std::pair<char, EnumAction>('w', EnumAction::Left));
 		m_CorrespondanceMap.insert(std::pair<char, EnumAction>('a', EnumAction::Action1));
 		m_CorrespondanceMap.insert(std::pair<char, EnumAction>('z', EnumAction::Action2));
-		m_CorrespondanceMap.insert(std::pair<char, EnumAction>('e', EnumAction::Action3));
 	}
 	else
 	{
@@ -41,7 +40,6 @@ Character::Character(std::string p_CharacterName, int p_PlayerId, int p_MaxLife)
 		m_CorrespondanceMap.insert(std::pair<char, EnumAction>('1', EnumAction::Left));
 		m_CorrespondanceMap.insert(std::pair<char, EnumAction>('7', EnumAction::Action1));
 		m_CorrespondanceMap.insert(std::pair<char, EnumAction>('8', EnumAction::Action2));
-		m_CorrespondanceMap.insert(std::pair<char, EnumAction>('9', EnumAction::Action3));
 	}
 	m_Combo = new Combo();
 }
@@ -114,22 +112,23 @@ void Character::Update()
 		m_CurrentState->Update();
 			return;
 	}
-	// A chaque tour on mets le valeur à jour
-	std::cout << "************************" << std::endl;
 
+
+	// J'ai essayé de le faire en propre et dynamique, mais comme la map se trie
+	// par ordre alphabetique des char passé, ça met toutes les input dans le désordre
+	
+	std::cout << "************************" << std::endl;
 	std::cout << "C'est le tour de P" << m_PlayerId << " ";
 	std::cout << GetName() << std::endl;
 	std::cout << "PV: " << m_currentLife << " " << "Action: " << "  ";
-
 	std::string input;
-	getline(std::cin, input);
+	getline(std::cin ,input);
+	if(input.size() > 3)
+		input.resize(3);
 
-	m_CurrentState->Update();
-	if (m_CurrentState->getStateName() == "Stun")
-		return;
 
 	//Attaque multiple
-	for (int i = 0; i < 3; i++) {
+	for (int i = 0; i < input.size(); i++) {
 		std::map<char, EnumAction>::iterator it = m_CorrespondanceMap.find(input[i]);
 		if (it != m_CorrespondanceMap.end())
 			m_Combo->Add(m_PlayerInput.HandleInput(it->second));
@@ -148,7 +147,7 @@ void Character::Update()
 				m_CurrentState = m_States[StateEnum::InAir];
 
 			}
-			else if (it->second == EnumAction::Action1 || it->second == EnumAction::Action2 || it->second == EnumAction::Action3) {
+			else if (it->second == EnumAction::Action1 || it->second == EnumAction::Action2 ) {
 				m_CurrentState = m_States.at(StateEnum::Attack);
 			}
 		}
@@ -157,6 +156,7 @@ void Character::Update()
 		m_CurrentState = m_States.at(StateEnum::Normal);
 	}		
 
+	m_CurrentState->Update();
 	if (m_Combo->GetLength() > 0) {
 		this->ExecuteAction();
 	}
